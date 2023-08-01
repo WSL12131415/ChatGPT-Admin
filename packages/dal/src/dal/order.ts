@@ -1,5 +1,5 @@
-import client, { Prisma } from "@caw/database";
-import { OrderStatus, type Order, type Subscription } from "@prisma/client";
+import client,{ Prisma} from "@caw/database";
+import {PrismaClient, OrderStatus, Order, Subscription,} from "@prisma/client";
 
 export class OrderDAL {
   constructor() {}
@@ -67,11 +67,9 @@ export class OrderDAL {
       },
     });
     const currentDate = new Date();
-    const subscriptionInput: Prisma.SubscriptionCreateInput = {
-      createdAt: currentDate,
-      expiredAt: new Date(
-        currentDate.getTime() + newOrder.price.duration * 1000
-      ),
+    const subscriptionInput: Prism.SubscriptionCreateInput = {
+      createdAt: new Order(newOrder).createdAt,
+      expiredAt: new Order(newOrder).expiredAt,
       order: {
         connect: {
           orderId: orderId,
