@@ -3,14 +3,14 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "bun-types": "^0.6.9"
+    "bun-types": "^0.7.1"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "@caw/database": "workspace:*",
-    "@upstash/redis": "^1.21.0",
+    "@upstash/redis": "^1.22.0",
     "database-old": "workspace:*",
     "zod": "^3.21.4"
   }
