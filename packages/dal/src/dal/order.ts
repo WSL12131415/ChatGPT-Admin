@@ -67,7 +67,7 @@ export class OrderDAL {
       },
     });
     const currentDate = new Date();
-    const subscriptionInput: Prism.SubscriptionCreateInput = {
+    const subscriptionInput: Prisma.SubscriptionCreateInput = {
       createdAt: new Order(newOrder).createdAt,
       expiredAt: new Order(newOrder).expiredAt,
       order: {
