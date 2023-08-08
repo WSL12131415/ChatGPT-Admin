@@ -33,7 +33,7 @@ export namespace DALType {
     name: string;
     features: string[];
     prices: Price[];
-    limits: Limit[];
+      limits: Limit[];
   }
 
   export interface newPlan {
