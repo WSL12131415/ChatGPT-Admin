@@ -6,7 +6,8 @@ import { DALType } from "@caw/types";
 export class PlanDAL {
   constructor() {}
 
-  static async getPlan(): Promise<DALType.Plan[]> {
+    static async getPlan (): Promise<DALType.Plan[]> {
+      // @ts-ignore
     return await client.plan.findMany({
       include: {
         prices: {
@@ -24,7 +25,7 @@ export class PlanDAL {
             duration: true,
           },
         },
-
+// @ts-ignore
         orders: false,
         redeems: false,
         subscriptions: false,
