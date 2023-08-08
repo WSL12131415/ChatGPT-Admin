@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strict": false,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "downlevelIteration": true,
@@ -12,13 +13,13 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "newLine": "lf",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
-    "noImplicitUseStrict": true,
+    "noImplicitUseStrict": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
-      "@lmobest/database": ["./packages/database/src"],
+      "@lmobest/database": ["./packages/database/src"]
     },
     "pretty": true,
     "resolveJsonModule": true,
