@@ -8,10 +8,17 @@ generator client {
 //   output   = "./"
 // }
 
+//datasource db {
+//  provider = "postgresql"
+//  url  = env("DATABASE_URL")
+//  directUrl = env("DIRECT_URL")
+//  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+//}
+
 datasource db {
-  provider          = "postgresql"
-  url               = env("DATABASE_URL")
-  directUrl         = env("DIRECT_URL")
+  provider = "postgresql"
+  url  = "postgres://macshion@ep-green-fire-27049023-pooler.us-west-2.aws.neon.tech/neondb?pgbouncer=true&connect_timeout=10"
+  directUrl = "postgres://macshion@ep-green-fire-27049023.us-west-2.aws.neon.tech/neondb?connect_timeout=10"
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
