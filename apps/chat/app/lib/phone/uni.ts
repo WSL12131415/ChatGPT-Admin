@@ -46,7 +46,7 @@ export async function uniSMS(number: string, code: string | number) {
         }),
       },
     )
-  ).json(code)) as UniResponse;
+  ).json()) as UniResponse;
   if (response.code !== "0") return false;
   //   throw
   return true;
